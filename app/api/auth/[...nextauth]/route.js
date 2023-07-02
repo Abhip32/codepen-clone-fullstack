@@ -1,4 +1,4 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { signOut } from "next-auth/react";
 
@@ -17,12 +17,10 @@ const handler = NextAuth({
       },
     }),
   ],
+  secret: "YOUR_SECRET_VALUE", // Add your secret value here
   pages: {
     signIn: "/Login",
     signOut: "/"
-  },
-  callbacks: {
-
   },
 });
 
