@@ -7,6 +7,7 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { useParams } from 'next/navigation';
 
 function App() {
+  if (typeof window !== "undefined") {
   const router = useParams();
   const [html, setHtml] = useState('');
   const [css, setCss] = useState('');
@@ -163,6 +164,10 @@ function App() {
       )}
     </>
   );
+}
+else{
+  return null;
+}
 }
 
 export default App;

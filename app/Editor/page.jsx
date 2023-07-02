@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 function App() {
+  if (typeof window !== "undefined") {
   const [html, setHtml] = useLocalStorage('html', '');
   const [css, setCss] = useLocalStorage('css', '');
   const [js, setJs] = useLocalStorage('js', '');
@@ -109,6 +110,10 @@ function App() {
     <button onClick={()=>{signIn()}}>Sign In</button></>}
     </>
   )
+}
+else{
+  return null;
+}
 }
 
 export default App;
