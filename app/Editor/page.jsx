@@ -4,6 +4,7 @@ import Editor from '@/components/Editor';
 import useLocalStorage from '@/hooks/useLocalStorage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import NotLoggedInComponent from '@/components/NotSigned';
 
 function App() {
   if (typeof window !== "undefined") {
@@ -106,8 +107,8 @@ function App() {
           height="100%"
           />
       </div>
-    </>:<> Not Logged IN
-    <button onClick={()=>{signIn()}}>Sign In</button></>}
+    </>:<> <NotLoggedInComponent/></>
+    }
     </>
   )
 }

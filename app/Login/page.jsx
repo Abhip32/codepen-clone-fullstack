@@ -47,7 +47,7 @@ export default function EmployeeLoginForm() {
                 password: data.password,
                 pic: user.pic.data
               });
-              setLoading(false);
+
 
             } catch (error) {
               console.log(error);

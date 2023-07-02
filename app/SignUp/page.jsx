@@ -58,6 +58,7 @@ const page = () => {
                 throw new Error(errorData.error);
               } else {
                 // Signup successful
+                alert("Account Created Successfully")
                 router.push("/");
                 setError('');
                 setLoading(false);

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import NotLoggedInComponent from '@/components/NotSigned';
 
 const page = () => {
   if (typeof window !== "undefined") {
@@ -42,7 +43,9 @@ const page = () => {
     
     
   return (
-    <div style={{minHeight:"100vh"}}>
+    <>
+    {session?.user?.name ? <>
+      <div style={{minHeight:"100vh"}}>
             <div className="">
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Content area */}
@@ -100,6 +103,9 @@ const page = () => {
   
   
   </div>
+    
+    </>:<><NotLoggedInComponent/></>}
+    </>
 
 
 

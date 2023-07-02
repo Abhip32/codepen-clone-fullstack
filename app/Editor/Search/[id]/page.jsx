@@ -158,8 +158,7 @@ function App() {
         </>
       ) : (
         <>
-          Not Logged In
-          <button onClick={() => signIn()}>Sign In</button>
+        <NotLoggedInComponent/>
         </>
       )}
     </>
