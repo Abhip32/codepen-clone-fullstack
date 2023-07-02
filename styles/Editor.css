@@ -47,8 +47,24 @@ body {
 
 .top-pane {
     background-color: hsl(225, 6%, 25%);
-    display: flex;
-}
+  }
+  
+  @media (min-width: 768px) {
+    .top-pane {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .top-pane > div {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .top-pane > div {
+      width: 33.33%;
+    }
+  }
 
 .pane {
     height: 1000vh;
