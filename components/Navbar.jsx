@@ -165,7 +165,7 @@ const NavBar = () => {
                                     Sign up
                                 </a>
                                 <p className="mt-6 text-center text-base font-medium text-gray-500">
-                                    Existing developer?
+                                    New User?
                                     <a href="/SignUp" className="text-indigo-600 hover:text-indigo-500">
                                         Sign In
                                     </a>
