@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import NotLoggedInComponent from '@/components/NotSigned';
 import Editor from '@/components/Editor';
 import useLocalStorage from '@/hooks/useLocalStorage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

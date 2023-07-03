@@ -5,6 +5,7 @@ import useLocalStorage from '@/hooks/useLocalStorage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { useParams } from 'next/navigation';
+import NotLoggedInComponent from '@/components/NotSigned';
 
 function App() {
   if (typeof window !== "undefined") {

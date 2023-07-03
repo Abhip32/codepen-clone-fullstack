@@ -89,9 +89,7 @@ const NavBar = () => {
                                                                     borderRadius: "100px"
                                                                 }
                                                             }
-                                                            src={
-                                                                userData.img
-                                                            }/>
+                                                            src={userData.img ? userData.img : "https://www.selectenglish.co.uk/wp-content/uploads/2022/11/no-user-image.gif"}/>
                                                         <h1>{
                                                             userData.name
                                                         }</h1>
@@ -182,9 +180,7 @@ const NavBar = () => {
                                                     borderRadius: "100px"
                                                 }
                                             }
-                                            src={
-                                                userData.img
-                                            }/>
+                                            src={userData.img ? userData.img : "https://www.selectenglish.co.uk/wp-content/uploads/2022/11/no-user-image.gif"}/>
                                         <h1>{
                                             userData.name
                                         }</h1>
