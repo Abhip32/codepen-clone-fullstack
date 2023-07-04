@@ -11,10 +11,7 @@ const page = () => {
     const [userData,setUserData] = useState([]);
     const [fileData,setFileData] = useState([]);
     const router=useRouter();
-    if(!session)
-    {
-      router.push("/")
-    }
+
       const getUserData = async (email) => { // Add async keyword here
         try {
           const response = await fetch(`/api/user/userData`, {
@@ -116,26 +113,28 @@ const page = () => {
     <div className='p-6 bg-white '>
   <h2 className="text-2xl font-semibold mb-4">Your Works</h2>
   {fileData.length ==0 && <h3>No Work Done start a new one</h3>}
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
     {fileData.map((file)=>
     {
-      return    <div className="border bg-zinc border-gray-200 rounded-lg shadow-md p-4">
+      return    <div className="bg-zinc-900 border-none rounded-lg shadow-md ">
       <div className='overflow-hidden'>
-        <iframe  className="preview h-70 border-2 w-full overflow-hidden" title="HTML Preview" srcDoc={`
+        <iframe  className="preview h-70 bg-white shadow-zinc border w-full overflow-hidden" title="HTML Preview" srcDoc={`
           <html>
             <body>${file.html}</body>
             <style>${file.css}</style>
           </html>
         `} scrolling="no" />
       </div>
-      <h1 className="text-xl text-zinc font-semibold mb-2 m-3">{file.name}</h1>
-      <button onClick={()=> router.push('/Editor/'+file._id)} className="w-full m-2 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+      <h1 className="text-xl text-white font-semibold mb-2 m-3 w-75" style={{textOverflow:"ellipsis"}}>{file.name}</h1>
+      <div className='flex items-center gap-1'>
+      <button onClick={()=> router.push('/Editor/'+file._id)} className="w-100 m-2 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                                     Edit
                                 </button>
 
-        <button onClick={()=> fileDelete(file._id)} className="w-full m-2 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700">
+        <button onClick={()=> fileDelete(file._id)} className="w-100 m-2 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700">
                                     Delete
         </button>
+        </div>
     </div>
     
     }

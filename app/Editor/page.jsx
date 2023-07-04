@@ -69,7 +69,7 @@ function App() {
     <>
     {session?.user?.name ? <>
       <div className='header'>
-        <div className='flex justify-between items-center border-none py-6 md:justify-start md:space-x-10 details'>
+        <div className='flex justify-between items-center border-none details w-full p-3'>
           <input type="text" value={fileName} className='proj-name' onChange={(e)=>{setFileName(e.target.value)}}></input>
           <button className="w-min flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700" onClick={()=>saveFile(session.user.email)}>Save</button> {/* Added save button */}
           

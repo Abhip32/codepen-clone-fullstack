@@ -8,23 +8,28 @@ import NotLoggedInComponent from '@/components/NotSigned';
 const page = () => {
   if (typeof window !== "undefined") {
     const { data: session } = useSession();
+    console.log(session?.user)
     const [searchTerm,setSearchTerm] = useState("")
     const [fileData,setFileData] = useState([]);
     const router=useRouter();
-    if(!session)
+    const [email,setEmail] = useState('')
+    const [serach,setSearch]=useState(false);
+
+    if(session?.user?.email && email ==='')
     {
-      router.push("/")
+      setEmail(session?.user?.email);
     }
 
     
     const search =async ()=>{
+      setSearch(true);
             try {
               const response = await fetch(`/api/Files/search`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ searchTerm}),
+                body: JSON.stringify({ searchTerm,email}),
               });
         
               if (response.status === 200) {
@@ -54,7 +59,7 @@ const page = () => {
               <h2 className="text-2xl font-semibold mb-4">Search</h2>
 
               <div>
-                <input onChange={(e)=>setSearchTerm(e.target.value)} type="text" placeholder="Enter your search query"/>
+                <input onChange={(e)=>setSearchTerm(e.target.value)} className='w-full p-5' type="text" placeholder="Enter your search query" style={{outline:"none"}}/>
                 <button onClick={()=>search()} className='mt-5 w-min flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700' onclick={()=>search()} >
                     Search
                 </button>
@@ -68,11 +73,16 @@ const page = () => {
   <div className="flex-grow">
   <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <div className='p-6 bg-white '>
-    {!fileData.length >0  ? <>
+
+    {fileData.length === 0 &&searchTerm.length !=0 && serach &&
+      <h2 className="text-2xl font-semibold mb-4 items-center justify-center">No Results Found</h2>}
+    {fileData.length !== 0 &&searchTerm.length !=0 &&
+      <h2 className="text-2xl font-semibold mb-4 items-center justify-center">Search Results</h2>}
+    {!fileData.length >0 && !serach? <>
       <h2 className="text-2xl font-semibold mb-4 items-center justify-center">Search for other's work</h2>
     
     </>:<>
-    <h2 className="text-2xl font-semibold mb-4">Your Results</h2>
+    
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
     {fileData.map((file)=>
     {

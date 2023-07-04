@@ -108,7 +108,7 @@ function App() {
       {session?.user?.name ? (
         <>
           <div className='header'>
-            <div className='flex justify-between items-center border-none py-6 md:justify-start md:space-x-10 details'>
+            <div className='flex justify-between items-center border-none details w-full p-3'>
               <div>
                 <input
                   type='text'
