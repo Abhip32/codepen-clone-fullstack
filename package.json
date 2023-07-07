@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
@@ -17,6 +19,23 @@
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.3.1",
+    "grapesjs": "^0.21.3",
+    "grapesjs-blocks-basic": "^1.0.2",
+    "grapesjs-blocks-flexbox": "^1.0.1",
+    "grapesjs-component-countdown": "^1.0.2",
+    "grapesjs-custom-code": "^1.0.2",
+    "grapesjs-lory-slider": "^0.1.5",
+    "grapesjs-navbar": "^1.0.2",
+    "grapesjs-plugin-ckeditor": "^1.0.1",
+    "grapesjs-plugin-filestack": "^0.1.1",
+    "grapesjs-plugin-forms": "^2.0.6",
+    "grapesjs-plugin-toolbox": "^1.0.15",
+    "grapesjs-preset-newsletter": "^1.0.2",
+    "grapesjs-style-bg": "^2.0.2",
+    "grapesjs-style-filter": "^1.0.2",
+    "grapesjs-style-gradient": "^3.0.1",
+    "grapesjs-tabs": "^1.0.6",
+    "grapesjs-tui-image-editor": "^1.0.2",
     "mongodb": "^5.6.0",
     "mongoose": "^7.3.1",
     "next": "13.4.7",
@@ -29,5 +48,8 @@
     "react-scripts": "5.0.0",
     "tailwindcss": "3.3.2",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "grapesjs-blocks-bootstrap4": "^0.2.3"
   }
 }

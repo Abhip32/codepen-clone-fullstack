@@ -101,7 +101,7 @@ const page = () => {
           {/* Content area */}
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-6 bg-white">
-              <h2 className="text-2xl font-semibold mb-4">Welcome, {userData.name}</h2>
+              <h2 className="text-2xl font-semibold mb-4">Welcome, {session?.user?.name}</h2>
               <button className='w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700' onClick={()=>router.push("/Editor")}>Create a new page </button>
             </div>
           </div>
