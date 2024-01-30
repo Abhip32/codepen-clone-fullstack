@@ -77,7 +77,6 @@ const NavBar = () => {
                                         <>
                                             <Link href="/Home" className="whitespace-nowrap text-black font-medium text-gray-500 hover:text-gray">Home</Link>
                                             <Link href="/Search" className="whitespace-nowrap text-black font-medium text-gray-500 hover:text-gray">Search</Link>
-                                            <Link href="/Builder" className="whitespace-nowrap text-black font-medium text-gray-500 hover:text-gray">Website Builder</Link>
                                             <span className="whitespace-nowrap text-black font-medium text-gray-500 hover:text-gray">
                                                 <button onClick={toggleDropdown}
                                                     className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
@@ -124,9 +123,6 @@ const NavBar = () => {
                             <a href="/SignUp" className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                                 Sign Up
                             </a>
-                            <a href="/Builder" className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                                Website Builder
-                            </a>
                         </div> : null
                     } </div>
                 </div>
@@ -166,9 +162,6 @@ const NavBar = () => {
                                 <a href="/Login" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                                     Sign In
                                 </a>
-                                <a href="/Builder" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                                    website builder
-                                </a>
                                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                                     New User?
                                     <a href="/SignUp" className="text-indigo-600 hover:text-indigo-500">
@@ -198,9 +191,7 @@ const NavBar = () => {
                                     <Link href="/Search" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                                         Search
                                     </Link>
-                                    <Link href="/Builder" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                                        Website Builder
-                                    </Link>
+                                
                                     
                                     <p className="mt-6 text-center text-base font-medium text-gray-500">
                                         <button onClick={signOut}

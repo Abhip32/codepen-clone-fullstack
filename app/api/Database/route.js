@@ -10,7 +10,7 @@ class Database {
   }
 
   _connect() {
-    mongoose.connect('mongodb://abhishek:KJw8ZVMPpT1pgJ7z@ac-xkmxtmg-shard-00-00.u5vmbji.mongodb.net:27017,ac-xkmxtmg-shard-00-01.u5vmbji.mongodb.net:27017,ac-xkmxtmg-shard-00-02.u5vmbji.mongodb.net:27017/?ssl=true&replicaSet=atlas-mkwo69-shard-0&authSource=admin&retryWrites=true&w=majority', {
+    mongoose.connect('mongodb://abhishek:12345677@ac-xkmxtmg-shard-00-00.u5vmbji.mongodb.net:27017,ac-xkmxtmg-shard-00-01.u5vmbji.mongodb.net:27017,ac-xkmxtmg-shard-00-02.u5vmbji.mongodb.net:27017/?ssl=true&replicaSet=atlas-mkwo69-shard-0&authSource=admin&retryWrites=true&w=majority', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })

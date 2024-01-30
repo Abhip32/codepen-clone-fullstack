@@ -149,7 +149,7 @@ function App() {
               onChange={setJs}
             />
           </div>
-          <div className='pane'>
+          <div className='pane' style={{backgroundColor:'white'}}>
             <iframe
               srcDoc={srcDoc}
               title='output'

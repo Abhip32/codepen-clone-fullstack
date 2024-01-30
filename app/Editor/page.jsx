@@ -77,7 +77,7 @@ function App() {
         
        
       </div>
-      <div className='top-pane'>
+      <div className='top-pane'style={{backgroundColor:'white'}}>
         <Editor 
           language="xml" 
           displayName="HTML" 

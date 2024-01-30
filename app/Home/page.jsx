@@ -95,13 +95,13 @@ const page = () => {
     
   return (
     <>
-    {session?.user?.name ? <>  <div style={{minHeight:"100vh"}}>
+    {session?.user?.name ? <>  <div style={{minHeight:"100vh",backgroundColor:'white'}}>
             <div className="flex-grow">
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Content area */}
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div className="p-6 bg-white">
-              <h2 className="text-2xl font-semibold mb-4">Welcome, {session?.user?.name}</h2>
+              <h2 className="text-2xl text-black font-semibold mb-4">Welcome, {session?.user?.name}</h2>
               <button className='w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700' onClick={()=>router.push("/Editor")}>Create a new page </button>
             </div>
           </div>
@@ -111,7 +111,7 @@ const page = () => {
   <div className="flex-grow">
   <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <div className='p-6 bg-white '>
-  <h2 className="text-2xl font-semibold mb-4">Your Works</h2>
+  <h2 className="text-2xl font-semibold mb-4 text-black">Your Files</h2>
   {fileData.length ==0 && <h3>No Work Done start a new one</h3>}
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
     {fileData.map((file)=>
